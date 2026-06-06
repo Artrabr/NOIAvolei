@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+            font-family: cursive;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            width: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <label for="q1">Qual seu animal preferido?</label>
+        <input id="q1" name="q1" type="text">
+        <button type="button" onclick="question1()">Enviar</button>
+
+        <script>
+            function question1(){
+                var answer = (document.getElementsByName("q1")[0].value || "");
+                if(answer.trim().toLowerCase() === "girafa"){
+                    window.location.href = "q2.html";
+                } else {
+                    alert("Resposta errada, esse não é o animal preferido da Nina");
+                }
+            }
+        </script>
+
+
+    </div>
+</body>
+</html>

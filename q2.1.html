@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q2.1 - Enigma</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+            font-family: cursive;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            gap: 12px;
+            padding: 24px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        input{ padding: 8px; border-radius: 6px; border: 1px solid #666; }
+        button{ padding: 8px 12px; border-radius: 6px; background:#444; color:#fff; border: none; cursor: pointer }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Enigma</h1>
+        <p>Levo minha casa nas costas e caminho devagar; quem sou eu?</p>
+
+        <label for="q2_1">Resposta:</label>
+        <input id="q2_1" name="q2_1" type="text">
+        <button type="button" onclick="question2_1()">Enviar</button>
+
+        <script>
+            function question2_1(){
+                var answer = (document.getElementsByName("q2_1")[0].value || "");
+                if(answer.trim().toLowerCase() === "tartaruga" || answer.trim().toLowerCase() === "tartarugas"){
+                    window.location.href = "q3.html";
+                } else {
+                    alert("Resposta errada. Dica: anda devagar e carrega sua casa.");
+                }
+            }
+        </script>
+    </div>
+</body>
+</html>

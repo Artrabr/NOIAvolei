@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+            font-family: cursive;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            width: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <p>ARQUIVO #901_W <br><br>##Enigma do diario<br><br>Mensagem:<br>19 - 15 - 12<br><br><br><br></p>
+        <button onclick="alert('A=1, B=2, C=3, D=4, ..., Z=26')">Dica</button>
+        <input id="q2" name="q2" type="text">
+        <button type="button" onclick="question2()">Enviar</button>
+
+        <script>
+            function question2(){
+                var answer = (document.getElementsByName("q2")[0].value || "");
+                if(answer.trim().toLowerCase() === "sol"){
+                    window.location.href = "q2.1.html";
+                } else {
+                    alert("Resposta errada, tente novamente");
+                }
+            }
+        </script>
+
+
+    </div>
+</body>
+</html>
