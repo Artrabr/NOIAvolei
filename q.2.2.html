@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q2.1 - Enigma</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+            font-family: arial;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            gap: 12px;
+            padding: 24px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        input{ padding: 8px; border-radius: 6px; border: 1px solid #666; }
+        button{ padding: 8px 12px; border-radius: 6px; background:#444; color:#fff; border: none; cursor: pointer }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <p>
+        ARQUIVO #907_N
+            <br>
+            <br>
+        ##Enigma de lembrança
+            <br>
+            <br>
+        Mensagem:
+            <br>
+        nos livros você encontrou qual
+        era a figura que formou?
+            <br>
+            <br>
+            <br>
+            <br>
+        </p>
+
+        <button onclick="alert('Um detalhe na figura que se formou na 2º carta')">Dica</button>
+
+            <br>
+            <br>
+
+        <input id="q2" name="q2" type="text">
+
+            <br>
+            <br>
+
+        <button type="button" onclick="question()">Enviar</button>
+
+        <script>
+            function question(){
+                var answer = (document.getElementsByName("q2")[0].value || "");
+                if(answer.trim().toLowerCase() === "maça" || answer.trim().toLowerCase() === "maca"){
+                    window.location.href = "q2.1.html";
+                } else if(answer.trim().toLowerCase() === "arvore" || answer.trim().toLowerCase() === "árvore"){
+                    alert("É a outra figura que se formou, tente novamente");
+                } else {
+                    alert("Resposta errada, tente novamente");
+                }
+            }
+        </script>
+
+
+    </div>
+</body>
+</html>
