@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q2.1 - Enigma</title>
+
+    <style>
+        body{
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            gap: 12px;
+            padding: 24px;
+            box-sizing: border-box;
+            text-align: center;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        p{
+            max-width: 100%;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            white-space: normal;
+            line-height: 1.6;
+        }
+
+        input{
+            width: min(300px, 80vw);
+            padding: 8px;
+            border-radius: 6px;
+            border: 1px solid #666;
+            box-sizing: border-box;
+
+            /* Mostra tudo minúsculo visualmente */
+            text-transform: lowercase;
+        }
+
+        button{
+            padding: 8px 12px;
+            border-radius: 6px;
+            background: #444;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover{
+            background: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <p>
+            ARQUIVO #281_K
+            <br><br>
+
+            ##Enigma de marinho II
+            <br><br>
+
+            Mensagem:
+            <br>
+
+            -.-. . -. --- ..- .-. .-
+
+            <br>
+            <br>
+
+            hn-e7FUjrb67tInbWDcM7VFKsuKeBQkM301vJFuxQh2VQnfS9x43gz0wabMRg_3p
+        </p>
+
+        <button onclick="alert('O codigo morce é a chave,\nuse o invertexto *Texto Criptografado*\ncoloque a chave e o texto criptografado')">
+            Dica
+        </button>
+
+        <br>
+
+        <input
+            id="q2"
+            name="q2"
+            type="text"
+            placeholder="Digite sua resposta"
+        >
+
+        <br>
+
+        <button type="button" onclick="question()">
+            Enviar
+        </button>
+
+        <script>
+            function question() {
+
+                let answer = (document.getElementById("q2").value || "")
+                    .trim()
+                    .toLowerCase();
+
+                if (
+                    answer === "sushi" ||
+                    answer === "suchi" ||
+                    answer === "peixe cru"
+                ) {
+                    window.location.href = "q3.html";
+                } else {
+                    alert("É uma comida fria");
+                }
+            }
+        </script>
+
+    </div>
+</body>
+</html>
